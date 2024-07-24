@@ -27,7 +27,6 @@ function App() {
           {/* //http://localhost:3000/edit-employee */}
           <Route path='/edit-employee/:id' element={<EmployeeComponent />}></Route>
 
-
         </Routes>
 
         <FooterComponent />
