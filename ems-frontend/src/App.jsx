@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import HeaderComponent from './components/HeaderComponent'
-import FooterComponent from './components/FooterComponent'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ListEmployeeComponent from './components/ListEmployeeComponent'
 import EmployeeComponent from './components/EmployeeComponent'
+import FooterComponent from './components/FooterComponent'
+import HeaderComponent from './components/HeaderComponent'
 import ListDepartmentComponent from './components/ListDepartmentComponent'
+import ListEmployeeComponent from './components/ListEmployeeComponent'
+import { DepartmentComponent } from './components/DepartmentComponent'
 
 function App() {
 
@@ -30,6 +30,9 @@ function App() {
 
           {/* //http://localhost:3000/departments */}
           <Route path='/departments' element={<ListDepartmentComponent />}></Route>
+
+          {/* //http://localhost:3000/add-department*/}
+          <Route path='/add-department' element={<DepartmentComponent />}></Route>
 
         </Routes>
 

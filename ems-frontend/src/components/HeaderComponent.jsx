@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -16,7 +17,7 @@ const HeaderComponent = () => {
                             </li>
 
                             <li className="nav-item">
-                                <NavLink className='nav-link' to='/depatments'>Departments</NavLink>
+                                <NavLink className='nav-link' to='/departments'>Departments</NavLink>
 
                             </li>
                         </ul>

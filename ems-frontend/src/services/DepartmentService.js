@@ -1,5 +1,5 @@
-import axios from "axios";
+import axios from 'axios';
 
-const REST_API_BASE_URL = 'http://localhost:8080/api/departments';
+const DEPARTMENT_API_BASE_URL = 'http://localhost:8080/api/departments';
 
-export const listDepartments = () => axios.get(REST_API_BASE_URL)
+export const getAllDepartments = () => axios.get(DEPARTMENT_API_BASE_URL)

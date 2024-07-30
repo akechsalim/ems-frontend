@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react'
 import { deleteEmployee, listEmployees } from '../services/EmployeeService'
 import { useNavigate } from 'react-router-dom'
@@ -8,22 +9,14 @@ const ListEmployeeComponent = () => {
 
     const navigator = useNavigate();
 
-    useEffect(() => {
-        getAllEmployees();
-    }, [])
+    useEffect(() => { getAllEmployees(); }, [])
 
     function getAllEmployees() {
-        listEmployees().then((response) => {
-            setEmployees(response.data);
-
-        }).catch(error => {
-            console.error(error);
-        })
+        listEmployees().then((response) => { setEmployees(response.data); }).catch(error => { console.error(error); })
     }
 
     function addNewEmployee() {
         navigator('/add-employee')
-
     }
 
     function updateEmployee(id) {
@@ -31,11 +24,7 @@ const ListEmployeeComponent = () => {
     }
 
     function removeEmployee(id) {
-        deleteEmployee(id).then((response) => {
-            getAllEmployees();
-        }).catch(error => {
-            console.error(error);
-        })
+        deleteEmployee(id).then(() => { getAllEmployees(); }).catch(error => { console.error(error); })
 
     }
 
