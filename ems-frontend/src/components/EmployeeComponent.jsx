@@ -29,7 +29,7 @@ const EmployeeComponent = () => {
                 console.log(error);
             })
         }
-    }, [])
+    }, [id])
 
 
     const navigator = useNavigate();

@@ -12,7 +12,7 @@ const ListEmployeeComponent = () => {
     useEffect(() => { getAllEmployees(); }, [])
 
     function getAllEmployees() {
-        listEmployees().then((response) => { setEmployees(response.data); }).catch(error => { console.error(error); })
+        listEmployees().then((response) => { setEmployees(response.data); console.log(response.data) }).catch(error => { console.error(error); })
     }
 
     function addNewEmployee() {
